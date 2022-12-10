@@ -26,6 +26,9 @@ public enum EntityType {
     Monster
 
 
+
+
+
 }
 
 public enum EntityState {
