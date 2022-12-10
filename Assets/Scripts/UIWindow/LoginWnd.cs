@@ -9,7 +9,9 @@
 using PEProtocol;
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// 设置Canvas根据窗口大小匹配匹配，然后以高度为匹配对象,给UI上的各个物体添加锚点，进行自适应
+/// </summary>
 public class LoginWnd : WindowRoot {
     public InputField iptAcct;
     public InputField iptPass;
