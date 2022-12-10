@@ -8,7 +8,9 @@
 
 using PEProtocol;
 using UnityEngine;
-
+/// <summary>
+/// 游戏启动入口
+/// </summary>
 public class GameRoot : MonoBehaviour {
     public static GameRoot Instance = null;
 
