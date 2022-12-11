@@ -60,6 +60,8 @@ public class GameRoot : MonoBehaviour {
         battle.InitSys();
 
         dynamicWnd.SetWndState();
+
+
         //进入登录场景并加载相应UI
         login.EnterLogin();
     }
