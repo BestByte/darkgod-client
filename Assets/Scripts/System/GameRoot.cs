@@ -39,6 +39,7 @@ public class GameRoot : MonoBehaviour {
         //服务模块初始化
         NetSvc net = GetComponent<NetSvc>();
         net.InitSvc();
+
         ResSvc res = GetComponent<ResSvc>();
         res.InitSvc();
         AudioSvc audio = GetComponent<AudioSvc>();
@@ -50,6 +51,7 @@ public class GameRoot : MonoBehaviour {
         //业务系统初始化
         LoginSys login = GetComponent<LoginSys>();
         login.InitSys();
+
         MainCitySys maincity = GetComponent<MainCitySys>();
         maincity.InitSys();
         FubenSys fuben = GetComponent<FubenSys>();
