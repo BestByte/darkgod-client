@@ -17,8 +17,10 @@ public class LoginWnd : WindowRoot {
     public InputField iptPass;
     public Button btnEnter;
     public Button btnNotice;
-
-    protected override void InitWnd() {
+	/// <summary>
+	/// 给LoginWnd添加一个LoginWnd脚本，里面进行初始化和更新
+	/// </summary>
+	protected override void InitWnd() {
         base.InitWnd();
 
         //获取本地存储的账号密码
