@@ -11,7 +11,8 @@ using PEProtocol;
 public class LoginSys : SystemRoot {
     public static LoginSys Instance = null;
 
-    public LoginWnd loginWnd;
+	
+	public LoginWnd loginWnd;
     public CreateWnd createWnd;
 
     public override void InitSys() {

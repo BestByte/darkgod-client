@@ -8,7 +8,9 @@
 
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// 给加载界面添加一个LoadingWnd脚本，进行管理。这个脚本有GameRoot直接负责进行管理，因为游戏中很多其他地方也会多次加载页面。
+/// </summary>
 public class LoadingWnd : WindowRoot {
     public Text txtTips;
     public Image imgFG;
