@@ -26,9 +26,10 @@ public class LoginSys : SystemRoot {
     /// 进入登录场景
     /// </summary>
     public void EnterLogin() {
-        //异步的加载登录场景
-        //并显示加载的进度
-        resSvc.AsyncLoadScene(Constants.SceneLogin, () => {
+		//异步的加载登录场景
+		//并显示加载的进度
+		//LoginSys的的EnterLogin方法中进行调用
+		resSvc.AsyncLoadScene(Constants.SceneLogin, () => {
             //加载完成以后再打开注册登录界面
             loginWnd.SetWndState();
             audioSvc.PlayBGMusic(Constants.BGLogin);
