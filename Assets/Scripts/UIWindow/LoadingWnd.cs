@@ -18,8 +18,10 @@ public class LoadingWnd : WindowRoot {
     public Text txtPrg;
 
     private float fgWidth;
-
-    protected override void InitWnd() {
+	/// <summary>
+	/// 在loadingWnd中添加初始化场景加载和修改读取条的方法
+	/// </summary>
+	protected override void InitWnd() {
         base.InitWnd();
 
         fgWidth = imgFG.GetComponent<RectTransform>().sizeDelta.x;
