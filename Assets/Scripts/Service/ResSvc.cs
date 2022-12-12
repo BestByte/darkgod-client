@@ -46,9 +46,12 @@ public class ResSvc : MonoBehaviour {
         InitSkillActionCfg(PathDefine.SkillActionCfg);
     }
 
-
-    private Action prgCB = null;
-    public void AsyncLoadScene(string sceneName, Action loaded) {
+	
+	private Action prgCB = null;
+	/// <summary>
+	/// ResSvc中添加异步加载场景的动画并且实时更新
+	/// </summary>
+	public void AsyncLoadScene(string sceneName, Action loaded) {
         GameRoot.Instance.loadingWnd.SetWndState();
 
         AsyncOperation sceneAsync = SceneManager.LoadSceneAsync(sceneName);
