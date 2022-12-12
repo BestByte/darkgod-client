@@ -10,7 +10,9 @@ using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
+/// <summary>
+/// 建立一个WindowRoot基类，让LoadingWnd和LoginWnd都继承它，方便管理
+/// </summary>
 public class WindowRoot : MonoBehaviour {
     protected ResSvc resSvc = null;
     protected AudioSvc audioSvc = null;
