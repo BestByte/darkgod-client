@@ -26,8 +26,10 @@ public class GameRoot : MonoBehaviour {
 
         Init();
     }
-
-    private void ClearUIRoot() {
+	/// <summary>
+	/// 在GameRoot里面新增加两个方法，一个是AddTips用来实现tips的添加，一个是ClearUIRoot用来把所有的Wnd都隐藏
+	/// </summary>
+	private void ClearUIRoot() {
         Transform canvas = transform.Find("Canvas");
         for (int i = 0; i < canvas.childCount; i++) {
             canvas.GetChild(i).gameObject.SetActive(false);
