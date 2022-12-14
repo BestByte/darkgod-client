@@ -38,7 +38,6 @@ public enum MonsterType {
     Boss = 2
 }
 
-
 public class Constants {
     private const string ColorRed = "<color=#FF0000FF>";
     private const string ColorGreen = "<color=#00FF00FF>";
