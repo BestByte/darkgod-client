@@ -19,8 +19,10 @@ public class CreateWnd : WindowRoot {
         //显示一个随机名字
         iptName.text = resSvc.GetRDNameData(false);
     }
-
-    public void ClickRandBtn() {
+	/// <summary>
+	/// 在CreateWnd中调用产生随机名字的方法，并且添加按钮点击的方法
+	/// </summary>
+	public void ClickRandBtn() {
         audioSvc.PlayUIAudio(Constants.UIClickBtn);
 
         string rdName = resSvc.GetRDNameData(false);
