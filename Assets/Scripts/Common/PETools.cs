@@ -6,7 +6,9 @@
 	功能：工具类
 *****************************************************/
 
-
+/// <summary>
+/// 创建一个PETools工具脚本，这里用来生成一个随机数，用来随机名字
+/// </summary>
 public class PETools {
     public static int RDInt(int min, int max, System.Random rd = null) {
         if (rd == null) {
