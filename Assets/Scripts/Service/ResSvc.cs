@@ -16,7 +16,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 using LogType = PEProtocol.LogType;
-
+/// <summary>
+/// ResSvc中写入一个新的方法来解析xml文件
+/// </summary>
 public class ResSvc : MonoBehaviour {
     public static ResSvc Instance = null;
 
