@@ -8,7 +8,9 @@
 
 using UnityEngine;
 using System.Collections;
-
+/// <summary>
+/// 建立一个PathDefine的脚本，用来存储xml文件的地址
+/// </summary>
 public class PathDefine {
 
     #region Configs
