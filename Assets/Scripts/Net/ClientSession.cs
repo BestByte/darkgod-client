@@ -8,7 +8,9 @@
 
 using PENet;
 using PEProtocol;
-
+/// <summary>
+/// ClientSession.cs用来进行客户端会话控制，与服务器端一致
+/// </summary>
 public class ClientSession : PESession<GameMsg> {
     protected override void OnConnected() {
         GameRoot.AddTips("连接服务器成功");
