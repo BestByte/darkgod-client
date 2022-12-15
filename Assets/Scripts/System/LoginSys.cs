@@ -35,8 +35,11 @@ public class LoginSys : SystemRoot {
             audioSvc.PlayBGMusic(Constants.BGLogin);
         });
     }
-
-    public void RspLogin(GameMsg msg) {
+	/// <summary>
+	/// 在LoginSys里面，分析登录验证逻辑和回应客户端
+	/// </summary>
+	/// <param name="msg"></param>
+	public void RspLogin(GameMsg msg) {
         GameRoot.AddTips("登录成功");
         GameRoot.Instance.SetPlayerData(msg.rspLogin);
 
