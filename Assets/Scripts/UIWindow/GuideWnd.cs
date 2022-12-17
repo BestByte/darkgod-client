@@ -82,7 +82,7 @@ public class GuideWnd : WindowRoot {
                 }
             };
 
-            netSvc.SendMsg(msg);
+            NetService.SendMsg(msg);
             SetWndState(false);
         }
         else {

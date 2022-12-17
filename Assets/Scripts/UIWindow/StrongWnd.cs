@@ -182,7 +182,7 @@ public class StrongWnd : WindowRoot {
                 return;
             }
 
-            netSvc.SendMsg(new GameMsg {
+            NetService.SendMsg(new GameMsg {
                 cmd = (int)CMD.ReqStrong,
                 reqStrong = new ReqStrong {
                     pos = currentIndex

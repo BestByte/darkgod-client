@@ -19,7 +19,7 @@ public class ClientSession : PESession<GameMsg> {
 
     protected override void OnReciveMsg(GameMsg msg) {
         PECommon.Log("RcvPack CMD:" + ((CMD)msg.cmd).ToString());
-        NetSvc.Instance.AddNetPkg(msg);
+        NetService.Instance.AddNetPkg(msg);
     }
 
     protected override void OnDisConnected() {

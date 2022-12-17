@@ -40,7 +40,7 @@ public class CreateWnd : WindowRoot {
                     name = iptName.text
                 }
             };
-            netSvc.SendMsg(msg);
+            NetService.SendMsg(msg);
         }
         else {
             GameRoot.AddTips("当前名字不符合规范");

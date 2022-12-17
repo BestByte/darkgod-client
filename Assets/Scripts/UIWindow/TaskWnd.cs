@@ -107,7 +107,7 @@ public class TaskWnd : WindowRoot {
             }
         };
 
-        netSvc.SendMsg(msg);
+        NetService.SendMsg(msg);
 
         TaskRewardCfg trc = resSvc.GetTaskRewardCfg(trdLst[index].ID);
         int coin = trc.coin;

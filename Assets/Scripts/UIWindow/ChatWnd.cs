@@ -87,7 +87,7 @@ public class ChatWnd : WindowRoot {
                     }
                 };
                 iptChat.text = "";
-                netSvc.SendMsg(msg);
+                NetService.SendMsg(msg);
                 canSend = false;
 
                 TimerService.AddTimeTask((int tid) => {

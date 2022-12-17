@@ -51,7 +51,7 @@ public class BuyWnd : WindowRoot {
             }
         };
 
-        netSvc.SendMsg(msg);
+        NetService.SendMsg(msg);
         btnSure.interactable = false;
     }
 

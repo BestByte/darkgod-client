@@ -57,7 +57,7 @@ public class LoginWnd : WindowRoot {
                 }
             };
 			//在客户端的LoginWnd.cs中给服务器发送登录的账号密码
-			netSvc.SendMsg(msg);
+			NetService.SendMsg(msg);
         }
         else {
             GameRoot.AddTips("账号或密码为空");

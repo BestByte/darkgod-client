@@ -16,7 +16,7 @@ using UnityEngine.UI;
 public class WindowRoot : MonoBehaviour {
     protected ResSvc resSvc = null;
     protected AudioService AudioService = null;
-    protected NetSvc netSvc = null;
+    protected NetService NetService = null;
     protected TimerService TimerService = null;
 
     public void SetWndState(bool isActive = true) {
@@ -39,14 +39,14 @@ public class WindowRoot : MonoBehaviour {
     protected virtual void InitWnd() {
         resSvc = ResSvc.Instance;
         AudioService = AudioService.Instance;
-        netSvc = NetSvc.Instance;
+        NetService = NetService.Instance;
         TimerService = TimerService.Instance;
     }
 
     protected virtual void ClearWnd() {
         resSvc = null;
         AudioService = null;
-        netSvc = null;
+        NetService = null;
         TimerService = null;
     }
 

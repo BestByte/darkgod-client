@@ -11,13 +11,13 @@ using UnityEngine;
 public class SystemRoot : MonoBehaviour {
     protected ResSvc resSvc;
     protected AudioService AudioService;
-    protected NetSvc netSvc;
+    protected NetService NetService;
     protected TimerService TimerService;
 
     public virtual void InitSys() {
         resSvc = ResSvc.Instance;
         AudioService = AudioService.Instance;
-        netSvc = NetSvc.Instance;
+        NetService = NetService.Instance;
         TimerService = TimerService.Instance;
     }
 }

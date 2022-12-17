@@ -39,7 +39,7 @@ public class GameRoot : MonoBehaviour {
     private void Init() {
 
         //服务模块初始化
-        NetSvc net = GetComponent<NetSvc>();
+        NetService net = GetComponent<NetService>();
         net.InitSvc();
 
         ResSvc res = GetComponent<ResSvc>();

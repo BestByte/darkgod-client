@@ -57,7 +57,7 @@ public class BattleSys : SystemRoot {
                 }
             };
 
-            netSvc.SendMsg(msg);
+            NetService.SendMsg(msg);
         }
         else {
             SetBattleEndWndState(FBEndType.Lose);

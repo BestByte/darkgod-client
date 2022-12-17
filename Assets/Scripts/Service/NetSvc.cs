@@ -1,5 +1,5 @@
 /****************************************************
-    文件：NetSvc.cs
+    文件：NetService.cs
 	作者：Plane
     邮箱: 1785275942@qq.com
     日期：2018/12/7 5:19:57
@@ -13,8 +13,8 @@ using UnityEngine;
 
 using LogType = PEProtocol.LogType;
 
-public class NetSvc : MonoBehaviour {
-    public static NetSvc Instance = null;
+public class NetService : MonoBehaviour {
+    public static NetService Instance = null;
 
     private static readonly string obj = "lock";
     PESocket<ClientSession, GameMsg> client = null;
@@ -46,7 +46,7 @@ public class NetSvc : MonoBehaviour {
             }
         });
         client.StartAsClient(SrvCfg.srvIP, SrvCfg.srvPort);
-        PECommon.Log("Init NetSvc...");
+        PECommon.Log("Init NetService...");
     }
 
     public void SendMsg(GameMsg msg) {
