@@ -58,7 +58,7 @@ public class GameRoot : MonoBehaviour {
         maincity.InitSys();
         FubenSystem fuben = GetComponent<FubenSystem>();
         fuben.InitSys();
-        BattleSys battle = GetComponent<BattleSys>();
+        BattleSystem battle = GetComponent<BattleSystem>();
         battle.InitSys();
 
         dynamicWnd.SetWndState();

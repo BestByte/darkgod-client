@@ -80,7 +80,7 @@ public class BattleEndWnd : WindowRoot {
 
     public void ClickClose() {
         AudioService.PlayUIAudio(Constants.UIClickBtn);
-        BattleSys.Instance.battleMgr.isPauseGame = false;
+        BattleSystem.Instance.battleMgr.isPauseGame = false;
         SetWndState(false);
     }
 
@@ -88,14 +88,14 @@ public class BattleEndWnd : WindowRoot {
         AudioService.PlayUIAudio(Constants.UIClickBtn);
         //进入主城，销毁当前战斗
         MainCitySys.Instance.EnterMainCity();
-        BattleSys.Instance.DestroyBattle();
+        BattleSystem.Instance.DestroyBattle();
     }
 
     public void ClickSureBtn() {
         AudioService.PlayUIAudio(Constants.UIClickBtn);
         //进入主城，销毁当前战斗
         MainCitySys.Instance.EnterMainCity();
-        BattleSys.Instance.DestroyBattle();
+        BattleSystem.Instance.DestroyBattle();
         //打开副本界面
         FubenSystem.Instance.EnterFuben();
     }

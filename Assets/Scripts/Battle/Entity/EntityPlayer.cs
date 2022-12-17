@@ -59,7 +59,7 @@ public class EntityPlayer : EntityBase {
     }
 
     public override void SetHPVal(int oldval, int newval) {
-        BattleSys.Instance.playerCtrlWnd.SetSelfHPBarVal(newval);
+        BattleSystem.Instance.playerCtrlWnd.SetSelfHPBarVal(newval);
     }
 
     public override void SetDodge() {

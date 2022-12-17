@@ -85,7 +85,7 @@ public class BattleMgr : MonoBehaviour {
     public void EndBattle(bool isWin, int restHP) {
         isPauseGame = true;
         AudioService.Instance.StopBGMusic();
-        BattleSys.Instance.EndBattle(isWin, restHP);
+        BattleSystem.Instance.EndBattle(isWin, restHP);
     }
 
     private void LoadPlayer(MapCfg mapData) {
@@ -151,7 +151,7 @@ public class BattleMgr : MonoBehaviour {
                     GameRoot.Instance.dynamicWnd.AddHpItemInfo(m.name, mc.hpRoot, em.HP);
                 }
                 else if (md.mCfg.mType == MonsterType.Boss) {
-                    BattleSys.Instance.playerCtrlWnd.SetBossHPBarState(true);
+                    BattleSystem.Instance.playerCtrlWnd.SetBossHPBarState(true);
                 }
             }
         }
@@ -262,7 +262,7 @@ public class BattleMgr : MonoBehaviour {
         entitySelfPlayer.Attack(103);
     }
     public Vector2 GetDirInput() {
-        return BattleSys.Instance.GetDirInput();
+        return BattleSystem.Instance.GetDirInput();
     }
 
     public bool CanRlsSkill() {

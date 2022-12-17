@@ -1,5 +1,5 @@
 /****************************************************
-	文件：BattleSys.cs
+	文件：BattleSystem.cs
 	作者：Plane
 	邮箱: 1785275942@qq.com
 	日期：2019/03/15 8:51   	
@@ -9,8 +9,8 @@
 using PEProtocol;
 using UnityEngine;
 
-public class BattleSys : SystemRoot {
-    public static BattleSys Instance = null;
+public class BattleSystem : SystemRoot {
+    public static BattleSystem Instance = null;
     public PlayerCtrlWnd playerCtrlWnd;
     public BattleEndWnd battleEndWnd;
     public BattleMgr battleMgr;
@@ -21,7 +21,7 @@ public class BattleSys : SystemRoot {
     public override void InitSys() {
         base.InitSys();
         Instance = this;
-        PECommon.Log("Init BattleSys...");
+        PECommon.Log("Init BattleSystem...");
     }
 
     public void StartBattle(int mapid) {

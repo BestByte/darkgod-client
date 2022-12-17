@@ -209,7 +209,7 @@ public class PlayerCtrlWnd : WindowRoot {
             SetActive(imgDirPoint, false);
             imgDirPoint.transform.localPosition = Vector2.zero;
             currentDir = Vector2.zero;
-            BattleSys.Instance.SetMoveDir(currentDir);
+            BattleSystem.Instance.SetMoveDir(currentDir);
         });
         OnDrag(imgTouch.gameObject, (PointerEventData evt) => {
             Vector2 dir = evt.position - startPos;
@@ -222,17 +222,17 @@ public class PlayerCtrlWnd : WindowRoot {
                 imgDirPoint.transform.position = evt.position;
             }
             currentDir = dir.normalized;
-            BattleSys.Instance.SetMoveDir(currentDir);
+            BattleSystem.Instance.SetMoveDir(currentDir);
         });
     }
 
     public void ClickNormalAtk() {
-        BattleSys.Instance.ReqReleaseSkill(0);
+        BattleSystem.Instance.ReqReleaseSkill(0);
     }
 
     public void ClickSkill1Atk() {
         if (isSk1CD == false && GetCanRlsSkill()) {
-            BattleSys.Instance.ReqReleaseSkill(1);
+            BattleSystem.Instance.ReqReleaseSkill(1);
             isSk1CD = true;
             SetActive(imgSk1CD);
             imgSk1CD.fillAmount = 1;
@@ -242,7 +242,7 @@ public class PlayerCtrlWnd : WindowRoot {
     }
     public void ClickSkill2Atk() {
         if (isSk2CD == false && GetCanRlsSkill()) {
-            BattleSys.Instance.ReqReleaseSkill(2);
+            BattleSystem.Instance.ReqReleaseSkill(2);
             isSk2CD = true;
             SetActive(imgSk2CD);
             imgSk2CD.fillAmount = 1;
@@ -252,7 +252,7 @@ public class PlayerCtrlWnd : WindowRoot {
     }
     public void ClickSkill3Atk() {
         if (isSk3CD == false && GetCanRlsSkill()) {
-            BattleSys.Instance.ReqReleaseSkill(3);
+            BattleSystem.Instance.ReqReleaseSkill(3);
             isSk3CD = true;
             SetActive(imgSk3CD);
             imgSk3CD.fillAmount = 1;
@@ -266,8 +266,8 @@ public class PlayerCtrlWnd : WindowRoot {
         ResService.ResetSkillCfgs();
     }
     public void ClickHeadBtn() {
-        BattleSys.Instance.battleMgr.isPauseGame = true;
-        BattleSys.Instance.SetBattleEndWndState(FBEndType.Pause);
+        BattleSystem.Instance.battleMgr.isPauseGame = true;
+        BattleSystem.Instance.SetBattleEndWndState(FBEndType.Pause);
     }
 
 
@@ -277,7 +277,7 @@ public class PlayerCtrlWnd : WindowRoot {
     }
 
     public bool GetCanRlsSkill() {
-        return BattleSys.Instance.battleMgr.CanRlsSkill();
+        return BattleSystem.Instance.battleMgr.CanRlsSkill();
     }
 
     public Transform transBossHPBar;

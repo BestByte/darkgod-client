@@ -144,7 +144,7 @@ public class NetService : MonoBehaviour {
                 FubenSystem.Instance.RspFBFight(msg);
                 break;
             case CMD.RspFBFightEnd:
-                BattleSys.Instance.RspFightEnd(msg);
+                BattleSystem.Instance.RspFightEnd(msg);
                 break;
         }
     }
