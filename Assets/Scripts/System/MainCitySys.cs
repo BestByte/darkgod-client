@@ -88,10 +88,10 @@ public class MainCitySys : SystemRoot {
         playerCtrl.Dir = dir;
     }
 
-    #region  Enter FubenSys
+    #region  Enter FubenSystem
     public void EnterFuben() {
         StopNavTask();
-        FubenSys.Instance.EnterFuben();
+        FubenSystem.Instance.EnterFuben();
     }
     #endregion
 

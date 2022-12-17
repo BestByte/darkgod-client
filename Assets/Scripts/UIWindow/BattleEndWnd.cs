@@ -97,7 +97,7 @@ public class BattleEndWnd : WindowRoot {
         MainCitySys.Instance.EnterMainCity();
         BattleSys.Instance.DestroyBattle();
         //打开副本界面
-        FubenSys.Instance.EnterFuben();
+        FubenSystem.Instance.EnterFuben();
     }
 
 

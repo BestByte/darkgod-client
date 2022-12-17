@@ -1,5 +1,5 @@
 /****************************************************
-	文件：FubenSys.cs
+	文件：FubenSystem.cs
 	作者：Plane
 	邮箱: 1785275942@qq.com
 	日期：2019/03/01 4:01   	
@@ -8,8 +8,8 @@
 
 using PEProtocol;
 
-public class FubenSys : SystemRoot {
-    public static FubenSys Instance = null;
+public class FubenSystem : SystemRoot {
+    public static FubenSystem Instance = null;
 
     public FubenWnd fubenWnd;
 
@@ -17,7 +17,7 @@ public class FubenSys : SystemRoot {
         base.InitSys();
 
         Instance = this;
-        PECommon.Log("Init FubenSys...");
+        PECommon.Log("Init FubenSystem...");
     }
 
     public void EnterFuben() {
