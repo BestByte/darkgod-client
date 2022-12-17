@@ -35,8 +35,8 @@ public class MainCitySys : SystemRoot {
     }
 
     public void EnterMainCity() {
-        MapCfg mapData = resSvc.GetMapCfg(Constants.MainCityMapID);
-        resSvc.AsyncLoadScene(mapData.sceneName, () => {
+        MapCfg mapData = ResService.GetMapCfg(Constants.MainCityMapID);
+        ResService.AsyncLoadScene(mapData.sceneName, () => {
             PECommon.Log("Enter MainCity...");
 
             // 加载游戏主角
@@ -61,7 +61,7 @@ public class MainCitySys : SystemRoot {
     }
 
     private void LoadPlayer(MapCfg mapData) {
-        GameObject player = resSvc.LoadPrefab(PathDefine.AssissnCityPlayerPrefab, true);
+        GameObject player = ResService.LoadPrefab(PathDefine.AssissnCityPlayerPrefab, true);
         player.transform.position = mapData.playerBornPos;
         player.transform.localEulerAngles = mapData.playerBornRote;
         player.transform.localScale = new Vector3(1.5F, 1.5F, 1.5F);

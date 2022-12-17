@@ -77,9 +77,9 @@ public class PlayerCtrlWnd : WindowRoot {
 
         SetBossHPBarState(false);
         RegisterTouchEvts();
-        sk1CDTime = resSvc.GetSkillCfg(101).cdTime / 1000.0f;
-        sk2CDTime = resSvc.GetSkillCfg(102).cdTime / 1000.0f;
-        sk3CDTime = resSvc.GetSkillCfg(103).cdTime / 1000.0f;
+        sk1CDTime = ResService.GetSkillCfg(101).cdTime / 1000.0f;
+        sk2CDTime = ResService.GetSkillCfg(102).cdTime / 1000.0f;
+        sk3CDTime = ResService.GetSkillCfg(103).cdTime / 1000.0f;
 
         RefreshUI();
     }
@@ -263,7 +263,7 @@ public class PlayerCtrlWnd : WindowRoot {
 
     //Test Reset Data
     public void ClickResetCfgs() {
-        resSvc.ResetSkillCfgs();
+        ResService.ResetSkillCfgs();
     }
     public void ClickHeadBtn() {
         BattleSys.Instance.battleMgr.isPauseGame = true;

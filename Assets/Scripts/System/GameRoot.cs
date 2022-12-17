@@ -42,7 +42,7 @@ public class GameRoot : MonoBehaviour {
         NetService net = GetComponent<NetService>();
         net.InitSvc();
 
-        ResSvc res = GetComponent<ResSvc>();
+        ResService res = GetComponent<ResService>();
         res.InitSvc();
         AudioService audio = GetComponent<AudioService>();
         audio.InitSvc();

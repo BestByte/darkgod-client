@@ -1,5 +1,5 @@
 /****************************************************
-    文件：ResSvc.cs
+    文件：ResService.cs
 	作者：Plane
     邮箱: 1785275942@qq.com
     日期：2018/12/3 5:31:29
@@ -17,10 +17,10 @@ using UnityEngine.SceneManagement;
 
 using LogType = PEProtocol.LogType;
 /// <summary>
-/// ResSvc中写入一个新的方法来解析xml文件
+/// ResService中写入一个新的方法来解析xml文件
 /// </summary>
-public class ResSvc : MonoBehaviour {
-    public static ResSvc Instance = null;
+public class ResService : MonoBehaviour {
+    public static ResService Instance = null;
 
     public void InitSvc() {
         Instance = this;
@@ -35,7 +35,7 @@ public class ResSvc : MonoBehaviour {
         InitSkillMoveCfg(PathDefine.SkillMoveCfg);
         InitSkillActionCfg(PathDefine.SkillActionCfg);
 
-        PECommon.Log("Init ResSvc...");
+        PECommon.Log("Init ResService...");
     }
 
     public void ResetSkillCfgs() {
@@ -51,7 +51,7 @@ public class ResSvc : MonoBehaviour {
 	
 	private Action prgCB = null;
 	/// <summary>
-	/// ResSvc中添加异步加载场景的动画并且实时更新
+	/// ResService中添加异步加载场景的动画并且实时更新
 	/// </summary>
 	public void AsyncLoadScene(string sceneName, Action loaded) {
         GameRoot.Instance.loadingWnd.SetWndState();

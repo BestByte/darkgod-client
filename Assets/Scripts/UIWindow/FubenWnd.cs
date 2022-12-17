@@ -44,7 +44,7 @@ public class FubenWnd : WindowRoot {
         AudioService.PlayUIAudio(Constants.UIClickBtn);
 
         //检查体力是否足够
-        int power = resSvc.GetMapCfg(fbid).power;
+        int power = ResService.GetMapCfg(fbid).power;
         if (power > pd.power) {
             GameRoot.AddTips("体力值不足");
         }

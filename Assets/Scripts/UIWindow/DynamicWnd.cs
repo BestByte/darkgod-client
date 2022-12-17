@@ -74,7 +74,7 @@ public class DynamicWnd : WindowRoot {
             return;
         }
         else {
-            GameObject go = resSvc.LoadPrefab(PathDefine.HPItemPrefab, true);
+            GameObject go = ResService.LoadPrefab(PathDefine.HPItemPrefab, true);
             go.transform.SetParent(hpItemRoot);
             go.transform.localPosition = new Vector3(-1000, 0, 0);
             ItemEntityHP ieh = go.GetComponent<ItemEntityHP>();

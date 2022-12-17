@@ -55,14 +55,14 @@ public class TaskWnd : WindowRoot {
         }
 
         for (int i = 0; i < trdLst.Count; i++) {
-            GameObject go = resSvc.LoadPrefab(PathDefine.TaskItemPrefab);
+            GameObject go = ResService.LoadPrefab(PathDefine.TaskItemPrefab);
             go.transform.SetParent(scrollTrans);
             go.transform.localPosition = Vector3.zero;
             go.transform.localScale = Vector3.one;
             go.name = "taskItem_" + i;
 
             TaskRewardData trd = trdLst[i];
-            TaskRewardCfg trf = resSvc.GetTaskRewardCfg(trd.ID);
+            TaskRewardCfg trf = ResService.GetTaskRewardCfg(trd.ID);
 
             SetText(GetTrans(go.transform, "txtName"), trf.taskName);
             SetText(GetTrans(go.transform, "txtPrg"), trd.prgs + "/" + trf.count);
@@ -109,7 +109,7 @@ public class TaskWnd : WindowRoot {
 
         NetService.SendMsg(msg);
 
-        TaskRewardCfg trc = resSvc.GetTaskRewardCfg(trdLst[index].ID);
+        TaskRewardCfg trc = ResService.GetTaskRewardCfg(trdLst[index].ID);
         int coin = trc.coin;
         int exp = trc.exp;
         GameRoot.AddTips(Constants.Color("获得奖励：", TxtColor.Blue) + Constants.Color(" 金币 +" + coin + " 经验 +" + exp, TxtColor.Green));

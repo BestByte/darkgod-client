@@ -9,7 +9,7 @@
 public class StateAttack : IState {
     public void Enter(EntityBase entity, params object[] args) {
         entity.currentAniState = AniState.Attack;
-        entity.curtSkillCfg = ResSvc.Instance.GetSkillCfg((int)args[0]);
+        entity.curtSkillCfg = ResService.Instance.GetSkillCfg((int)args[0]);
         //PECommon.Log("Enter StateAttack.");
     }
 

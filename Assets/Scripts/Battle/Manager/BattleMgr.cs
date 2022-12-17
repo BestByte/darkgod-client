@@ -12,7 +12,7 @@ using PEProtocol;
 using UnityEngine;
 
 public class BattleMgr : MonoBehaviour {
-    private ResSvc resSvc;
+    private ResService ResService;
     private AudioService AudioService;
 
     private StateMgr stateMgr;
@@ -25,7 +25,7 @@ public class BattleMgr : MonoBehaviour {
     private Dictionary<string, EntityMonster> monsterDic = new Dictionary<string, EntityMonster>();
 
     public void Init(int mapid, Action cb = null) {
-        resSvc = ResSvc.Instance;
+        ResService = ResService.Instance;
         AudioService = AudioService.Instance;
 
         //初始化各管理器
@@ -35,8 +35,8 @@ public class BattleMgr : MonoBehaviour {
         skillMgr.Init();
 
         //加载战场地图
-        mapCfg = resSvc.GetMapCfg(mapid);
-        resSvc.AsyncLoadScene(mapCfg.sceneName, () => {
+        mapCfg = ResService.GetMapCfg(mapid);
+        ResService.AsyncLoadScene(mapCfg.sceneName, () => {
             //初始化地图数据
             GameObject map = GameObject.FindGameObjectWithTag("MapRoot");
             mapMgr = map.GetComponent<MapMgr>();
@@ -89,7 +89,7 @@ public class BattleMgr : MonoBehaviour {
     }
 
     private void LoadPlayer(MapCfg mapData) {
-        GameObject player = resSvc.LoadPrefab(PathDefine.AssissnBattlePlayerPrefab);
+        GameObject player = ResService.LoadPrefab(PathDefine.AssissnBattlePlayerPrefab);
 
         player.transform.position = mapData.playerBornPos;
         player.transform.localEulerAngles = mapData.playerBornRote;
@@ -124,7 +124,7 @@ public class BattleMgr : MonoBehaviour {
         for (int i = 0; i < mapCfg.monsterLst.Count; i++) {
             MonsterData md = mapCfg.monsterLst[i];
             if (md.mWave == wave) {
-                GameObject m = resSvc.LoadPrefab(md.mCfg.resPath, true);
+                GameObject m = ResService.LoadPrefab(md.mCfg.resPath, true);
                 m.transform.localPosition = md.mBornPos;
                 m.transform.localEulerAngles = md.mBornRote;
                 m.transform.localScale = Vector3.one;

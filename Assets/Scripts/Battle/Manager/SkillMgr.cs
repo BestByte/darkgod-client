@@ -13,11 +13,11 @@ using PEProtocol;
 using UnityEngine;
 
 public class SkillMgr : MonoBehaviour {
-    private ResSvc resSvc;
+    private ResService ResService;
     private TimerService timeSvc;
 
     public void Init() {
-        resSvc = ResSvc.Instance;
+        ResService = ResService.Instance;
         timeSvc = TimerService.Instance;
         PECommon.Log("Init SkillMgr Done.");
     }
@@ -31,11 +31,11 @@ public class SkillMgr : MonoBehaviour {
     }
 
     public void AttackDamage(EntityBase entity, int skillID) {
-        SkillCfg skillData = resSvc.GetSkillCfg(skillID);
+        SkillCfg skillData = ResService.GetSkillCfg(skillID);
         List<int> actonLst = skillData.skillActionLst;
         int sum = 0;
         for (int i = 0; i < actonLst.Count; i++) {
-            SkillActionCfg skillAction = resSvc.GetSkillActionCfg(actonLst[i]);
+            SkillActionCfg skillAction = ResService.GetSkillActionCfg(actonLst[i]);
             sum += skillAction.delayTime;
             int index = i;
             if (sum > 0) {
@@ -55,7 +55,7 @@ public class SkillMgr : MonoBehaviour {
     }
 
     public void SkillAction(EntityBase caster, SkillCfg skillCfg, int index) {
-        SkillActionCfg skillActionCfg = resSvc.GetSkillActionCfg(skillCfg.skillActionLst[index]);
+        SkillActionCfg skillActionCfg = ResService.GetSkillActionCfg(skillCfg.skillActionLst[index]);
 
         int damage = skillCfg.skillDamageLst[index];
         if (caster.entityType == EntityType.Monster) {
@@ -176,7 +176,7 @@ public class SkillMgr : MonoBehaviour {
     /// 技能效果表现
     /// </summary>
     public void AttackEffect(EntityBase entity, int skillID) {
-        SkillCfg skillData = resSvc.GetSkillCfg(skillID);
+        SkillCfg skillData = ResService.GetSkillCfg(skillID);
 
         if (!skillData.isCollide) {
             //忽略掉刚体碰撞
@@ -218,7 +218,7 @@ public class SkillMgr : MonoBehaviour {
         List<int> skillMoveLst = skillData.skillMoveLst;
         int sum = 0;
         for (int i = 0; i < skillMoveLst.Count; i++) {
-            SkillMoveCfg skillMoveCfg = resSvc.GetSkillMoveCfg(skillData.skillMoveLst[i]);
+            SkillMoveCfg skillMoveCfg = ResService.GetSkillMoveCfg(skillData.skillMoveLst[i]);
             float speed = skillMoveCfg.moveDis / (skillMoveCfg.moveTime / 1000f);
             sum += skillMoveCfg.delayTime;
             if (sum > 0) {

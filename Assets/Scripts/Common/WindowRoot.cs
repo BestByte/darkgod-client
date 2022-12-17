@@ -14,7 +14,7 @@ using UnityEngine.UI;
 /// 建立一个WindowRoot基类，让LoadingWnd和LoginWnd都继承它，方便管理
 /// </summary>
 public class WindowRoot : MonoBehaviour {
-    protected ResSvc resSvc = null;
+    protected ResService ResService = null;
     protected AudioService AudioService = null;
     protected NetService NetService = null;
     protected TimerService TimerService = null;
@@ -37,14 +37,14 @@ public class WindowRoot : MonoBehaviour {
     }
 
     protected virtual void InitWnd() {
-        resSvc = ResSvc.Instance;
+        ResService = ResService.Instance;
         AudioService = AudioService.Instance;
         NetService = NetService.Instance;
         TimerService = TimerService.Instance;
     }
 
     protected virtual void ClearWnd() {
-        resSvc = null;
+        ResService = null;
         AudioService = null;
         NetService = null;
         TimerService = null;
@@ -82,7 +82,7 @@ public class WindowRoot : MonoBehaviour {
     }
 
     protected void SetSprite(Image img, string path) {
-        Sprite sp = resSvc.LoadSprite(path, true);
+        Sprite sp = ResService.LoadSprite(path, true);
         img.sprite = sp;
     }
 

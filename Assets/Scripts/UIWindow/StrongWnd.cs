@@ -121,14 +121,14 @@ public class StrongWnd : WindowRoot {
         }
 
         int nextStartLv = curtStarLv + 1;
-        int sumAddHp = resSvc.GetPropAddValPreLv(currentIndex, nextStartLv, 1);
-        int sumAddHurt = resSvc.GetPropAddValPreLv(currentIndex, nextStartLv, 2);
-        int sumAddDef = resSvc.GetPropAddValPreLv(currentIndex, nextStartLv, 3);
+        int sumAddHp = ResService.GetPropAddValPreLv(currentIndex, nextStartLv, 1);
+        int sumAddHurt = ResService.GetPropAddValPreLv(currentIndex, nextStartLv, 2);
+        int sumAddDef = ResService.GetPropAddValPreLv(currentIndex, nextStartLv, 3);
         SetText(propHP1, "生命  +" + sumAddHp);
         SetText(propHurt1, "伤害  +" + sumAddHurt);
         SetText(propDef1, "防御  +" + sumAddDef);
 
-        nextSd = resSvc.GetStrongCfg(currentIndex, nextStartLv);
+        nextSd = ResService.GetStrongCfg(currentIndex, nextStartLv);
         if (nextSd != null) {
             SetActive(propHP2);
             SetActive(propHurt2);
