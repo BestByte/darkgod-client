@@ -55,11 +55,11 @@ public class InfoWnd : WindowRoot {
     private void RegTouchEvts() {
         OnClickDown(imgChar.gameObject, (PointerEventData evt) => {
             startPos = evt.position;
-            MainCitySys.Instance.SetStartRoate();
+            MainCitySystem.Instance.SetStartRoate();
         });
         OnDrag(imgChar.gameObject, (PointerEventData evt) => {
             float roate = -(evt.position.x - startPos.x) * 0.4f;
-            MainCitySys.Instance.SetPlayerRoate(roate);
+            MainCitySystem.Instance.SetPlayerRoate(roate);
         });
     }
 
@@ -91,7 +91,7 @@ public class InfoWnd : WindowRoot {
 
     public void ClickCloseBtn() {
         AudioService.PlayUIAudio(Constants.UIClickBtn);
-        MainCitySys.Instance.CloseInfoWnd();
+        MainCitySystem.Instance.CloseInfoWnd();
     }
     public void ClickDetailBtn() {
         AudioService.PlayUIAudio(Constants.UIClickBtn);

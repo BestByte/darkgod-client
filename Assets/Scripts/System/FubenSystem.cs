@@ -32,7 +32,7 @@ public class FubenSystem : SystemRoot {
 
     public void RspFBFight(GameMsg msg) {
         GameRoot.Instance.SetPlayerDataByFBStart(msg.rspFBFight);
-        MainCitySys.Instance.maincityWnd.SetWndState(false);
+        MainCitySystem.Instance.maincityWnd.SetWndState(false);
         SetFubenWndState(false);
         BattleSystem.Instance.StartBattle(msg.rspFBFight.fbid);
     }

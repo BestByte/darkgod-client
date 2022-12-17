@@ -124,30 +124,30 @@ public class MainCityWnd : WindowRoot {
     #region ClickEvts
     public void ClickFubenBtn() {
         AudioService.PlayUIAudio(Constants.UIOpenPage);
-        MainCitySys.Instance.EnterFuben();
+        MainCitySystem.Instance.EnterFuben();
     }
 
     public void ClickTaskBtn() {
         AudioService.PlayUIAudio(Constants.UIOpenPage);
-        MainCitySys.Instance.OpenTaskRewardWnd();
+        MainCitySystem.Instance.OpenTaskRewardWnd();
     }
     public void ClickBuyPowerBtn() {
         AudioService.PlayUIAudio(Constants.UIOpenPage);
-        MainCitySys.Instance.OpenBuyWnd(0);
+        MainCitySystem.Instance.OpenBuyWnd(0);
     }
     public void ClickMKCoinBtn() {
         AudioService.PlayUIAudio(Constants.UIOpenPage);
-        MainCitySys.Instance.OpenBuyWnd(1);
+        MainCitySystem.Instance.OpenBuyWnd(1);
     }
     public void ClickStrongBtn() {
         AudioService.PlayUIAudio(Constants.UIOpenPage);
-        MainCitySys.Instance.OpenStrongWnd();
+        MainCitySystem.Instance.OpenStrongWnd();
     }
     public void ClickGuideBtn() {
         AudioService.PlayUIAudio(Constants.UIClickBtn);
 
         if (curtTaskData != null) {
-            MainCitySys.Instance.RunTask(curtTaskData);
+            MainCitySystem.Instance.RunTask(curtTaskData);
         }
         else {
             GameRoot.AddTips("更多引导任务，正在开发中...");
@@ -168,11 +168,11 @@ public class MainCityWnd : WindowRoot {
     }
     public void ClickHeadBtn() {
         AudioService.PlayUIAudio(Constants.UIOpenPage);
-        MainCitySys.Instance.OpenInfoWnd();
+        MainCitySystem.Instance.OpenInfoWnd();
     }
     public void ClickChatBtn() {
         AudioService.PlayUIAudio(Constants.UIOpenPage);
-        MainCitySys.Instance.OpenChatWnd();
+        MainCitySystem.Instance.OpenChatWnd();
     }
 
     public void RegisterTouchEvts() {
@@ -185,7 +185,7 @@ public class MainCityWnd : WindowRoot {
             imgDirBg.transform.position = defaultPos;
             SetActive(imgDirPoint, false);
             imgDirPoint.transform.localPosition = Vector2.zero;
-            MainCitySys.Instance.SetMoveDir(Vector2.zero);
+            MainCitySystem.Instance.SetMoveDir(Vector2.zero);
         });
         OnDrag(imgTouch.gameObject, (PointerEventData evt) => {
             Vector2 dir = evt.position - startPos;
@@ -197,7 +197,7 @@ public class MainCityWnd : WindowRoot {
             else {
                 imgDirPoint.transform.position = evt.position;
             }
-            MainCitySys.Instance.SetMoveDir(dir.normalized);
+            MainCitySystem.Instance.SetMoveDir(dir.normalized);
         });
     }
     #endregion

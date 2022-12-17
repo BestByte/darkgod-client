@@ -120,25 +120,25 @@ public class NetService : MonoBehaviour {
                 LoginSystem.Instance.RspRename(msg);
                 break;
             case CMD.RspGuide:
-                MainCitySys.Instance.RspGuide(msg);
+                MainCitySystem.Instance.RspGuide(msg);
                 break;
             case CMD.RspStrong:
-                MainCitySys.Instance.RspStrong(msg);
+                MainCitySystem.Instance.RspStrong(msg);
                 break;
             case CMD.PshChat:
-                MainCitySys.Instance.PshChat(msg);
+                MainCitySystem.Instance.PshChat(msg);
                 break;
             case CMD.RspBuy:
-                MainCitySys.Instance.RspBuy(msg);
+                MainCitySystem.Instance.RspBuy(msg);
                 break;
             case CMD.PshPower:
-                MainCitySys.Instance.PshPower(msg);
+                MainCitySystem.Instance.PshPower(msg);
                 break;
             case CMD.RspTakeTaskReward:
-                MainCitySys.Instance.RspTakeTaskReward(msg);
+                MainCitySystem.Instance.RspTakeTaskReward(msg);
                 break;
             case CMD.PshTaskPrgs:
-                MainCitySys.Instance.PshTaskPrgs(msg);
+                MainCitySystem.Instance.PshTaskPrgs(msg);
                 break;
             case CMD.RspFBFight:
                 FubenSystem.Instance.RspFBFight(msg);

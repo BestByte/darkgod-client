@@ -87,14 +87,14 @@ public class BattleEndWnd : WindowRoot {
     public void ClickExitBtn() {
         AudioService.PlayUIAudio(Constants.UIClickBtn);
         //进入主城，销毁当前战斗
-        MainCitySys.Instance.EnterMainCity();
+        MainCitySystem.Instance.EnterMainCity();
         BattleSystem.Instance.DestroyBattle();
     }
 
     public void ClickSureBtn() {
         AudioService.PlayUIAudio(Constants.UIClickBtn);
         //进入主城，销毁当前战斗
-        MainCitySys.Instance.EnterMainCity();
+        MainCitySystem.Instance.EnterMainCity();
         BattleSystem.Instance.DestroyBattle();
         //打开副本界面
         FubenSystem.Instance.EnterFuben();

@@ -54,7 +54,7 @@ public class GameRoot : MonoBehaviour {
         LoginSystem login = GetComponent<LoginSystem>();
         login.InitSys();
 
-        MainCitySys maincity = GetComponent<MainCitySys>();
+        MainCitySystem maincity = GetComponent<MainCitySystem>();
         maincity.InitSys();
         FubenSystem fuben = GetComponent<FubenSystem>();
         fuben.InitSys();

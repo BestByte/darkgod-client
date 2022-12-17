@@ -1,5 +1,5 @@
 /****************************************************
-    文件：MainCitySys.cs
+    文件：MainCitySystem.cs
 	作者：Plane
     邮箱: 1785275942@qq.com
     日期：2018/12/12 6:49:4
@@ -10,8 +10,8 @@ using PEProtocol;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class MainCitySys : SystemRoot {
-    public static MainCitySys Instance = null;
+public class MainCitySystem : SystemRoot {
+    public static MainCitySystem Instance = null;
 
     public MainCityWnd maincityWnd;
     public InfoWnd infoWnd;
@@ -31,7 +31,7 @@ public class MainCitySys : SystemRoot {
         base.InitSys();
 
         Instance = this;
-        PECommon.Log("Init MainCitySys...");
+        PECommon.Log("Init MainCitySystem...");
     }
 
     public void EnterMainCity() {

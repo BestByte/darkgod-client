@@ -47,7 +47,7 @@ public class LoginSystem : SystemRoot {
             createWnd.SetWndState();
         }
         else {
-            MainCitySys.Instance.EnterMainCity();
+            MainCitySystem.Instance.EnterMainCity();
         }
         //关闭登录界面
         loginWnd.SetWndState(false);
@@ -57,7 +57,7 @@ public class LoginSystem : SystemRoot {
         GameRoot.Instance.SetPlayerName(msg.rspRename.name);
 
         //跳转场景进入主城
-        MainCitySys.Instance.EnterMainCity();
+        MainCitySystem.Instance.EnterMainCity();
         //关闭创建界面
         createWnd.SetWndState(false);
     }

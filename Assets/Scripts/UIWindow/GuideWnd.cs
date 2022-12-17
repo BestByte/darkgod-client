@@ -24,7 +24,7 @@ public class GuideWnd : WindowRoot {
         base.InitWnd();
 
         pd = GameRoot.Instance.PlayerData;
-        curtTaskData = MainCitySys.Instance.GetCurtTaskData();
+        curtTaskData = MainCitySystem.Instance.GetCurtTaskData();
         dialogArr = curtTaskData.dilogArr.Split('#');
         index = 1;
 
