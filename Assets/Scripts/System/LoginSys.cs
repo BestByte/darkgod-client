@@ -1,5 +1,5 @@
 /****************************************************
-    文件：LoginSys.cs
+    文件：LoginSystem.cs
 	作者：Plane
     邮箱: 1785275942@qq.com
     日期：2018/12/3 5:31:49
@@ -8,8 +8,8 @@
 
 using PEProtocol;
 
-public class LoginSys : SystemRoot {
-    public static LoginSys Instance = null;
+public class LoginSystem : SystemRoot {
+    public static LoginSystem Instance = null;
 
 	
 	public LoginWnd loginWnd;
@@ -19,7 +19,7 @@ public class LoginSys : SystemRoot {
         base.InitSys();
 
         Instance = this;
-        PECommon.Log("Init LoginSys...");
+        PECommon.Log("Init LoginSystem...");
     }
 
     /// <summary>
@@ -28,7 +28,7 @@ public class LoginSys : SystemRoot {
     public void EnterLogin() {
 		//异步的加载登录场景
 		//并显示加载的进度
-		//LoginSys的的EnterLogin方法中进行调用
+		//LoginSystem的的EnterLogin方法中进行调用
 		ResService.AsyncLoadScene(Constants.SceneLogin, () => {
             //加载完成以后再打开注册登录界面
             loginWnd.SetWndState();
@@ -36,7 +36,7 @@ public class LoginSys : SystemRoot {
         });
     }
 	/// <summary>
-	/// 在LoginSys里面，分析登录验证逻辑和回应客户端
+	/// 在LoginSystem里面，分析登录验证逻辑和回应客户端
 	/// </summary>
 	/// <param name="msg"></param>
 	public void RspLogin(GameMsg msg) {

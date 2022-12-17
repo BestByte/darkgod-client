@@ -114,10 +114,10 @@ public class NetService : MonoBehaviour {
         }
         switch ((CMD)msg.cmd) {
             case CMD.RspLogin:
-                LoginSys.Instance.RspLogin(msg);
+                LoginSystem.Instance.RspLogin(msg);
                 break;
             case CMD.RspRename:
-                LoginSys.Instance.RspRename(msg);
+                LoginSystem.Instance.RspRename(msg);
                 break;
             case CMD.RspGuide:
                 MainCitySys.Instance.RspGuide(msg);

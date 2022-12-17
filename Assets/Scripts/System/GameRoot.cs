@@ -51,7 +51,7 @@ public class GameRoot : MonoBehaviour {
 
 
         //业务系统初始化
-        LoginSys login = GetComponent<LoginSys>();
+        LoginSystem login = GetComponent<LoginSystem>();
         login.InitSys();
 
         MainCitySys maincity = GetComponent<MainCitySys>();
