@@ -47,7 +47,7 @@ public class MainCitySys : SystemRoot {
 
             GameRoot.Instance.GetComponent<AudioListener>().enabled = false;
             //播放主城背景音乐
-            audioSvc.PlayBGMusic(Constants.BGMainCity);
+            AudioService.PlayBGMusic(Constants.BGMainCity);
 
             GameObject map = GameObject.FindGameObjectWithTag("MapRoot");
             MainCityMap mcm = map.GetComponent<MainCityMap>();

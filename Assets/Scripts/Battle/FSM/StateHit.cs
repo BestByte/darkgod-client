@@ -29,7 +29,7 @@ public class StateHit : IState {
         //受击音效
         if (entity.entityType == EntityType.Player) {
             AudioSource charAudio = entity.GetAudio();
-            AudioSvc.Instance.PlayCharAudio(Constants.AssassinHit, charAudio);
+            AudioService.Instance.PlayCharAudio(Constants.AssassinHit, charAudio);
         }
 
 

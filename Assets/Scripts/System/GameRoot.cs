@@ -44,7 +44,7 @@ public class GameRoot : MonoBehaviour {
 
         ResSvc res = GetComponent<ResSvc>();
         res.InitSvc();
-        AudioSvc audio = GetComponent<AudioSvc>();
+        AudioService audio = GetComponent<AudioService>();
         audio.InitSvc();
         TimerSvc timer = GetComponent<TimerSvc>();
         timer.InitSvc();

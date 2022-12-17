@@ -40,7 +40,7 @@ public class BuyWnd : WindowRoot {
     }
 
     public void ClickSureBtn() {
-        audioSvc.PlayUIAudio(Constants.UIClickBtn);
+        AudioService.PlayUIAudio(Constants.UIClickBtn);
 
         //发送网络购买消息 
         GameMsg msg = new GameMsg {
@@ -56,7 +56,7 @@ public class BuyWnd : WindowRoot {
     }
 
     public void ClickCloseBtn() {
-        audioSvc.PlayUIAudio(Constants.UIClickBtn);
+        AudioService.PlayUIAudio(Constants.UIClickBtn);
         SetWndState(false);
     }
 }

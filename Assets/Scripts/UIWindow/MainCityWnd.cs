@@ -123,28 +123,28 @@ public class MainCityWnd : WindowRoot {
 
     #region ClickEvts
     public void ClickFubenBtn() {
-        audioSvc.PlayUIAudio(Constants.UIOpenPage);
+        AudioService.PlayUIAudio(Constants.UIOpenPage);
         MainCitySys.Instance.EnterFuben();
     }
 
     public void ClickTaskBtn() {
-        audioSvc.PlayUIAudio(Constants.UIOpenPage);
+        AudioService.PlayUIAudio(Constants.UIOpenPage);
         MainCitySys.Instance.OpenTaskRewardWnd();
     }
     public void ClickBuyPowerBtn() {
-        audioSvc.PlayUIAudio(Constants.UIOpenPage);
+        AudioService.PlayUIAudio(Constants.UIOpenPage);
         MainCitySys.Instance.OpenBuyWnd(0);
     }
     public void ClickMKCoinBtn() {
-        audioSvc.PlayUIAudio(Constants.UIOpenPage);
+        AudioService.PlayUIAudio(Constants.UIOpenPage);
         MainCitySys.Instance.OpenBuyWnd(1);
     }
     public void ClickStrongBtn() {
-        audioSvc.PlayUIAudio(Constants.UIOpenPage);
+        AudioService.PlayUIAudio(Constants.UIOpenPage);
         MainCitySys.Instance.OpenStrongWnd();
     }
     public void ClickGuideBtn() {
-        audioSvc.PlayUIAudio(Constants.UIClickBtn);
+        AudioService.PlayUIAudio(Constants.UIClickBtn);
 
         if (curtTaskData != null) {
             MainCitySys.Instance.RunTask(curtTaskData);
@@ -154,7 +154,7 @@ public class MainCityWnd : WindowRoot {
         }
     }
     public void ClickMenuBtn() {
-        audioSvc.PlayUIAudio(Constants.UIExtenBtn);
+        AudioService.PlayUIAudio(Constants.UIExtenBtn);
 
         menuState = !menuState;
         AnimationClip clip = null;
@@ -167,11 +167,11 @@ public class MainCityWnd : WindowRoot {
         menuAni.Play(clip.name);
     }
     public void ClickHeadBtn() {
-        audioSvc.PlayUIAudio(Constants.UIOpenPage);
+        AudioService.PlayUIAudio(Constants.UIOpenPage);
         MainCitySys.Instance.OpenInfoWnd();
     }
     public void ClickChatBtn() {
-        audioSvc.PlayUIAudio(Constants.UIOpenPage);
+        AudioService.PlayUIAudio(Constants.UIOpenPage);
         MainCitySys.Instance.OpenChatWnd();
     }
 

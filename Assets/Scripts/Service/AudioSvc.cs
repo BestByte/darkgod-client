@@ -1,5 +1,5 @@
 /****************************************************
-    文件：AudioSvc.cs
+    文件：AudioService.cs
 	作者：Plane
     邮箱: 1785275942@qq.com
     日期：2018/12/4 5:21:39
@@ -10,14 +10,14 @@ using PEProtocol;
 
 using UnityEngine;
 
-public class AudioSvc : MonoBehaviour {
-    public static AudioSvc Instance = null;
+public class AudioService : MonoBehaviour {
+    public static AudioService Instance = null;
     public AudioSource bgAudio;
     public AudioSource uiAudio;
 
     public void InitSvc() {
         Instance = this;
-        PECommon.Log("Init AudioSvc...");
+        PECommon.Log("Init Audio...");
     }
 
     public void StopBGMusic() {

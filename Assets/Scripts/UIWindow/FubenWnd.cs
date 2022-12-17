@@ -41,7 +41,7 @@ public class FubenWnd : WindowRoot {
     }
 
     public void ClickTaskBtn(int fbid) {
-        audioSvc.PlayUIAudio(Constants.UIClickBtn);
+        AudioService.PlayUIAudio(Constants.UIClickBtn);
 
         //检查体力是否足够
         int power = resSvc.GetMapCfg(fbid).power;
@@ -59,7 +59,7 @@ public class FubenWnd : WindowRoot {
     }
 
     public void ClickCloseBtn() {
-        audioSvc.PlayUIAudio(Constants.UIClickBtn);
+        AudioService.PlayUIAudio(Constants.UIClickBtn);
         SetWndState(false);
     }
 }

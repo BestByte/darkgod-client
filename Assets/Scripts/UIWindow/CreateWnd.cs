@@ -23,14 +23,14 @@ public class CreateWnd : WindowRoot {
 	/// 在CreateWnd中调用产生随机名字的方法，并且添加按钮点击的方法
 	/// </summary>
 	public void ClickRandBtn() {
-        audioSvc.PlayUIAudio(Constants.UIClickBtn);
+        AudioService.PlayUIAudio(Constants.UIClickBtn);
 
         string rdName = resSvc.GetRDNameData(false);
         iptName.text = rdName;
     }
 
     public void ClickEnterBtn() {
-        audioSvc.PlayUIAudio(Constants.UIClickBtn);
+        AudioService.PlayUIAudio(Constants.UIClickBtn);
 
         if (iptName.text != "") {
             //发送名字数据到服务器，登录主城

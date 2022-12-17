@@ -56,13 +56,13 @@ public class BattleEndWnd : WindowRoot {
                     SetActive(rewardTrans);
                     ani.Play();
                     timerSvc.AddTimeTask((int tid1) => {
-                        audioSvc.PlayUIAudio(Constants.FBItemEnter);
+                        AudioService.PlayUIAudio(Constants.FBItemEnter);
                         timerSvc.AddTimeTask((int tid2) => {
-                            audioSvc.PlayUIAudio(Constants.FBItemEnter);
+                            AudioService.PlayUIAudio(Constants.FBItemEnter);
                             timerSvc.AddTimeTask((int tid3) => {
-                                audioSvc.PlayUIAudio(Constants.FBItemEnter);
+                                AudioService.PlayUIAudio(Constants.FBItemEnter);
                                 timerSvc.AddTimeTask((int tid5) => {
-                                    audioSvc.PlayUIAudio(Constants.FBLogoEnter);
+                                    AudioService.PlayUIAudio(Constants.FBLogoEnter);
                                 }, 300);
                             }, 270);
                         }, 270);
@@ -73,26 +73,26 @@ public class BattleEndWnd : WindowRoot {
                 SetActive(rewardTrans, false);
                 SetActive(btnExit.gameObject);
                 SetActive(btnClose.gameObject, false);
-                audioSvc.PlayUIAudio(Constants.FBLose);
+                AudioService.PlayUIAudio(Constants.FBLose);
                 break;
         }
     }
 
     public void ClickClose() {
-        audioSvc.PlayUIAudio(Constants.UIClickBtn);
+        AudioService.PlayUIAudio(Constants.UIClickBtn);
         BattleSys.Instance.battleMgr.isPauseGame = false;
         SetWndState(false);
     }
 
     public void ClickExitBtn() {
-        audioSvc.PlayUIAudio(Constants.UIClickBtn);
+        AudioService.PlayUIAudio(Constants.UIClickBtn);
         //进入主城，销毁当前战斗
         MainCitySys.Instance.EnterMainCity();
         BattleSys.Instance.DestroyBattle();
     }
 
     public void ClickSureBtn() {
-        audioSvc.PlayUIAudio(Constants.UIClickBtn);
+        AudioService.PlayUIAudio(Constants.UIClickBtn);
         //进入主城，销毁当前战斗
         MainCitySys.Instance.EnterMainCity();
         BattleSys.Instance.DestroyBattle();

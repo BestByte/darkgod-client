@@ -56,7 +56,7 @@ public class StrongWnd : WindowRoot {
 
             OnClick(img.gameObject, (object args) => {
                 ClickPosItem((int)args);
-                audioSvc.PlayUIAudio(Constants.UIClickBtn);
+                AudioService.PlayUIAudio(Constants.UIClickBtn);
             }, i);
             imgs[i] = img;
         }
@@ -161,12 +161,12 @@ public class StrongWnd : WindowRoot {
     }
 
     public void ClickCloseBtn() {
-        audioSvc.PlayUIAudio(Constants.UIClickBtn);
+        AudioService.PlayUIAudio(Constants.UIClickBtn);
         SetWndState(false);
     }
 
     public void ClickStrongBtn() {
-        audioSvc.PlayUIAudio(Constants.UIClickBtn);
+        AudioService.PlayUIAudio(Constants.UIClickBtn);
 
         if (pd.strongArr[currentIndex] < 10) {
             if (pd.lv < nextSd.minlv) {
@@ -195,7 +195,7 @@ public class StrongWnd : WindowRoot {
     }
 
     public void UpdateUI() {
-        audioSvc.PlayUIAudio(Constants.FBItemEnter);
+        AudioService.PlayUIAudio(Constants.FBItemEnter);
         ClickPosItem(currentIndex);
     }
 }

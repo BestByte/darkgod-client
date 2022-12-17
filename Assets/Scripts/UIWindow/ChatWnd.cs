@@ -100,22 +100,22 @@ public class ChatWnd : WindowRoot {
         }
     }
     public void ClickWorldBtn() {
-        audioSvc.PlayUIAudio(Constants.UIClickBtn);
+        AudioService.PlayUIAudio(Constants.UIClickBtn);
         chatType = 0;
         RefreshUI();
     }
     public void ClickGuildBtn() {
-        audioSvc.PlayUIAudio(Constants.UIClickBtn);
+        AudioService.PlayUIAudio(Constants.UIClickBtn);
         chatType = 1;
         RefreshUI();
     }
     public void ClickFriendBtn() {
-        audioSvc.PlayUIAudio(Constants.UIClickBtn);
+        AudioService.PlayUIAudio(Constants.UIClickBtn);
         chatType = 2;
         RefreshUI();
     }
     public void ClickCloseBtn() {
-        audioSvc.PlayUIAudio(Constants.UIClickBtn);
+        AudioService.PlayUIAudio(Constants.UIClickBtn);
         chatType = 0;
         SetWndState(false);
     }

@@ -15,7 +15,7 @@ using UnityEngine.UI;
 /// </summary>
 public class WindowRoot : MonoBehaviour {
     protected ResSvc resSvc = null;
-    protected AudioSvc audioSvc = null;
+    protected AudioService AudioService = null;
     protected NetSvc netSvc = null;
     protected TimerSvc timerSvc = null;
 
@@ -38,14 +38,14 @@ public class WindowRoot : MonoBehaviour {
 
     protected virtual void InitWnd() {
         resSvc = ResSvc.Instance;
-        audioSvc = AudioSvc.Instance;
+        AudioService = AudioService.Instance;
         netSvc = NetSvc.Instance;
         timerSvc = TimerSvc.Instance;
     }
 
     protected virtual void ClearWnd() {
         resSvc = null;
-        audioSvc = null;
+        AudioService = null;
         netSvc = null;
         timerSvc = null;
     }

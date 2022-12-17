@@ -13,7 +13,7 @@ using UnityEngine;
 
 public class BattleMgr : MonoBehaviour {
     private ResSvc resSvc;
-    private AudioSvc audioSvc;
+    private AudioService AudioService;
 
     private StateMgr stateMgr;
     private SkillMgr skillMgr;
@@ -26,7 +26,7 @@ public class BattleMgr : MonoBehaviour {
 
     public void Init(int mapid, Action cb = null) {
         resSvc = ResSvc.Instance;
-        audioSvc = AudioSvc.Instance;
+        AudioService = AudioService.Instance;
 
         //初始化各管理器
         stateMgr = gameObject.AddComponent<StateMgr>();
@@ -54,7 +54,7 @@ public class BattleMgr : MonoBehaviour {
             //激活第一批次怪物
             ActiveCurrentBatchMonsters();
 
-            audioSvc.PlayBGMusic(Constants.BGHuangYe);
+            AudioService.PlayBGMusic(Constants.BGHuangYe);
             if (cb != null) {
                 cb();
             }
@@ -84,7 +84,7 @@ public class BattleMgr : MonoBehaviour {
 
     public void EndBattle(bool isWin, int restHP) {
         isPauseGame = true;
-        AudioSvc.Instance.StopBGMusic();
+        AudioService.Instance.StopBGMusic();
         BattleSys.Instance.EndBattle(isWin, restHP);
     }
 
