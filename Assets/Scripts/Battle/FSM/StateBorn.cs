@@ -17,7 +17,7 @@ public class StateBorn : IState {
     public void Process(EntityBase entity, params object[] args) {
         //播放出生动画
         entity.SetAction(Constants.ActionBorn);
-        TimerSvc.Instance.AddTimeTask((int tid) => {
+        TimerService.Instance.AddTimeTask((int tid) => {
             entity.SetAction(Constants.ActionDefault);
         }, 500);
     }

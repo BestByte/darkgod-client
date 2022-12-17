@@ -90,7 +90,7 @@ public class ChatWnd : WindowRoot {
                 netSvc.SendMsg(msg);
                 canSend = false;
 
-                timerSvc.AddTimeTask((int tid) => {
+                TimerService.AddTimeTask((int tid) => {
                     canSend = true;
                 }, 5, PETimeUnit.Second);
             }

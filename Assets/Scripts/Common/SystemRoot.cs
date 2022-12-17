@@ -12,12 +12,12 @@ public class SystemRoot : MonoBehaviour {
     protected ResSvc resSvc;
     protected AudioService AudioService;
     protected NetSvc netSvc;
-    protected TimerSvc timerSvc;
+    protected TimerService TimerService;
 
     public virtual void InitSys() {
         resSvc = ResSvc.Instance;
         AudioService = AudioService.Instance;
         netSvc = NetSvc.Instance;
-        timerSvc = TimerSvc.Instance;
+        TimerService = TimerService.Instance;
     }
 }

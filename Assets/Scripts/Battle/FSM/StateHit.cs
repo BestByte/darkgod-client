@@ -33,7 +33,7 @@ public class StateHit : IState {
         }
 
 
-        TimerSvc.Instance.AddTimeTask((int tid) => {
+        TimerService.Instance.AddTimeTask((int tid) => {
             entity.SetAction(Constants.ActionDefault);
             entity.Idle();
         }, (int)(GetHitAniLen(entity) * 1000));

@@ -17,7 +17,7 @@ public class WindowRoot : MonoBehaviour {
     protected ResSvc resSvc = null;
     protected AudioService AudioService = null;
     protected NetSvc netSvc = null;
-    protected TimerSvc timerSvc = null;
+    protected TimerService TimerService = null;
 
     public void SetWndState(bool isActive = true) {
         if (gameObject.activeSelf != isActive) {
@@ -40,14 +40,14 @@ public class WindowRoot : MonoBehaviour {
         resSvc = ResSvc.Instance;
         AudioService = AudioService.Instance;
         netSvc = NetSvc.Instance;
-        timerSvc = TimerSvc.Instance;
+        TimerService = TimerService.Instance;
     }
 
     protected virtual void ClearWnd() {
         resSvc = null;
         AudioService = null;
         netSvc = null;
-        timerSvc = null;
+        TimerService = null;
     }
 
     #region Tool Functions

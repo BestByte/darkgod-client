@@ -38,11 +38,11 @@ public abstract class Controller : MonoBehaviour {
     protected float skillMoveSpeed = 0f;
 
 
-    protected TimerSvc timerSvc;
+    protected TimerService TimerService;
     protected Dictionary<string, GameObject> fxDic = new Dictionary<string, GameObject>();
 
     public virtual void Init() {
-        timerSvc = TimerSvc.Instance;
+        TimerService = TimerService.Instance;
     }
 
 

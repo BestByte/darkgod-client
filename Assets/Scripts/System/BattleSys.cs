@@ -34,7 +34,7 @@ public class BattleSys : SystemRoot {
         battleMgr = go.AddComponent<BattleMgr>();
 
         battleMgr.Init(mapid, () => {
-            startTime = timerSvc.GetNowTime();
+            startTime = TimerService.GetNowTime();
         });
         SetPlayerCtrlWndState();
     }
@@ -44,7 +44,7 @@ public class BattleSys : SystemRoot {
         GameRoot.Instance.dynamicWnd.RmvAllHpItemInfo();
 
         if (isWin) {
-            double endTime = timerSvc.GetNowTime();
+            double endTime = TimerService.GetNowTime();
             //发送结算战斗请求
             //TODO
             GameMsg msg = new GameMsg {

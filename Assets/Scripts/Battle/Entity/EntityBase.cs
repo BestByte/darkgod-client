@@ -260,17 +260,17 @@ public abstract class EntityBase {
 
         for (int i = 0; i < skMoveCBLst.Count; i++) {
             int tid = skMoveCBLst[i];
-            TimerSvc.Instance.DelTask(tid);
+            TimerService.Instance.DelTask(tid);
         }
 
         for (int i = 0; i < skActionCBLst.Count; i++) {
             int tid = skActionCBLst[i];
-            TimerSvc.Instance.DelTask(tid);
+            TimerService.Instance.DelTask(tid);
         }
 
         //攻击被中断，删除定时回调
         if (skEndCB != -1) {
-            TimerSvc.Instance.DelTask(skEndCB);
+            TimerService.Instance.DelTask(skEndCB);
             skEndCB = -1;
         }
         skMoveCBLst.Clear();

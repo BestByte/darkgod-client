@@ -52,16 +52,16 @@ public class BattleEndWnd : WindowRoot {
                 SetText(txtRestHP, "剩余血量：" + resthp);
                 SetText(txtReward, "关卡奖励：" + Constants.Color(coin + "金币", TxtColor.Green) + Constants.Color(exp + "经验", TxtColor.Yellow) + Constants.Color(crystal + "水晶", TxtColor.Blue));
 
-                timerSvc.AddTimeTask((int tid) => {
+                TimerService.AddTimeTask((int tid) => {
                     SetActive(rewardTrans);
                     ani.Play();
-                    timerSvc.AddTimeTask((int tid1) => {
+                    TimerService.AddTimeTask((int tid1) => {
                         AudioService.PlayUIAudio(Constants.FBItemEnter);
-                        timerSvc.AddTimeTask((int tid2) => {
+                        TimerService.AddTimeTask((int tid2) => {
                             AudioService.PlayUIAudio(Constants.FBItemEnter);
-                            timerSvc.AddTimeTask((int tid3) => {
+                            TimerService.AddTimeTask((int tid3) => {
                                 AudioService.PlayUIAudio(Constants.FBItemEnter);
-                                timerSvc.AddTimeTask((int tid5) => {
+                                TimerService.AddTimeTask((int tid5) => {
                                     AudioService.PlayUIAudio(Constants.FBLogoEnter);
                                 }, 300);
                             }, 270);

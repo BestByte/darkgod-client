@@ -1,5 +1,5 @@
 /****************************************************
-	文件：TimerSvc.cs
+	文件：TimerService.cs
 	作者：Plane
 	邮箱: 1785275942@qq.com
 	日期：2019/02/24 5:56   	
@@ -10,8 +10,8 @@ using System;
 
 using PEProtocol;
 
-public class TimerSvc : SystemRoot {
-    public static TimerSvc Instance = null;
+public class TimerService : SystemRoot {
+    public static TimerService Instance = null;
 
     private PETimer pt;
 
@@ -24,7 +24,7 @@ public class TimerSvc : SystemRoot {
             PECommon.Log(info);
         });
 
-        PECommon.Log("Init TimerSvc...");
+        PECommon.Log("Init TimerService...");
     }
 
     public void Update() {

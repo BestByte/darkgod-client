@@ -20,7 +20,7 @@ public class StateDie : IState {
         entity.SetAction(Constants.ActionDie);
         if (entity.entityType == EntityType.Monster) {
             entity.GetCC().enabled = false;
-            TimerSvc.Instance.AddTimeTask((int tid) => {
+            TimerService.Instance.AddTimeTask((int tid) => {
                 entity.SetActive(false);
             }, Constants.DieAniLength);
         }

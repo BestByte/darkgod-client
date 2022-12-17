@@ -138,7 +138,7 @@ public class PlayerController : Controller {
         GameObject go;
         if (fxDic.TryGetValue(name, out go)) {
             go.SetActive(true);
-            timerSvc.AddTimeTask((int tid) => {
+            TimerService.AddTimeTask((int tid) => {
                 go.SetActive(false);
             }, destroy);
         }

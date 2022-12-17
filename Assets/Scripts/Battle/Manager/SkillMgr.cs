@@ -14,11 +14,11 @@ using UnityEngine;
 
 public class SkillMgr : MonoBehaviour {
     private ResSvc resSvc;
-    private TimerSvc timeSvc;
+    private TimerService timeSvc;
 
     public void Init() {
         resSvc = ResSvc.Instance;
-        timeSvc = TimerSvc.Instance;
+        timeSvc = TimerService.Instance;
         PECommon.Log("Init SkillMgr Done.");
     }
 

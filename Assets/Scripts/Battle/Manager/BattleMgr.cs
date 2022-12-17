@@ -158,11 +158,11 @@ public class BattleMgr : MonoBehaviour {
     }
 
     public void ActiveCurrentBatchMonsters() {
-        TimerSvc.Instance.AddTimeTask((int tid) => {
+        TimerService.Instance.AddTimeTask((int tid) => {
             foreach (var item in monsterDic) {
                 item.Value.SetActive(true);
                 item.Value.Born();
-                TimerSvc.Instance.AddTimeTask((int id) => {
+                TimerService.Instance.AddTimeTask((int id) => {
                     //出生1秒钟后进入Idle
                     item.Value.Idle();
                 }, 1000);
@@ -230,7 +230,7 @@ public class BattleMgr : MonoBehaviour {
         //PECommon.Log("Click Normal Atk");
         if (entitySelfPlayer.currentAniState == AniState.Attack) {
             //在500ms以内进行第二次点击，存数据
-            double nowAtkTime = TimerSvc.Instance.GetNowTime();
+            double nowAtkTime = TimerService.Instance.GetNowTime();
             if (nowAtkTime - lastAtkTime < Constants.ComboSpace && lastAtkTime != 0) {
                 if (comboArr[comboIndex] != comboArr[comboArr.Length - 1]) {
                     comboIndex += 1;
@@ -245,7 +245,7 @@ public class BattleMgr : MonoBehaviour {
         }
         else if (entitySelfPlayer.currentAniState == AniState.Idle || entitySelfPlayer.currentAniState == AniState.Move) {
             comboIndex = 0;
-            lastAtkTime = TimerSvc.Instance.GetNowTime();
+            lastAtkTime = TimerService.Instance.GetNowTime();
             entitySelfPlayer.Attack(comboArr[comboIndex]);
         }
     }
